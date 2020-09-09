@@ -21,7 +21,7 @@ f = x^2
 f = @(x) x^2
 ```
 
-Zum Beispiel lassen sich nur `1.`-Funktionen direkt mit `solve(f)` lösen, nicht jedoch `2.`.
+Zum Beispiel lassen sich nur `1)`-Funktionen direkt mit `solve(f)` lösen, nicht jedoch `2)`.
 
 ## Plotten
 
