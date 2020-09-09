@@ -53,7 +53,8 @@ solve(f, x)
 Minimum einer Funktion (`x0` ist Startpunkt der Suche)
 
 ```
-minY = fminsearch(f, x0)
+minX = fminsearch(f, x0)
+minY = f(minX)
 ```
 
 Ableiten einer Funktion
