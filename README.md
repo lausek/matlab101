@@ -64,9 +64,11 @@ f1 = diff(f, x, 1) % Erste Ableitung
 f2 = diff(f, x, 2) % Zweite Ableitung
 ```
 
-Tangente an einer Stelle `x0`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
+Tangente an einer Stelle `g`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
 
 ```
+df = subs(diff(f, x), x, g);
+fplot(df*(x-g) + f(g))    
 ```
 
 Integrieren einer Funktion (`a` untere Grenze, `b` obere Grenze)
