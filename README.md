@@ -125,13 +125,7 @@ Integral mit Fläche zeichnen
 
 ```
 f = @(x) -1*x.^3+4*x.^2+-5*x+2
-x = linspace(0, 5);
-inty = cumtrapz(x,f(x));
-figure(1)
-plot(x, inty, '-k', 'LineWidth',1)
-hold on
-patch([x fliplr(x)], [zeros(size(x)) fliplr(inty)], 'g')
-hold off
+area(f(linspace(-10,10)))
 ```
 
 Plotten einer Funktion mit zwei Variablen
