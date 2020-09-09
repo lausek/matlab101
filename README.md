@@ -31,7 +31,7 @@ Eine Funktion, die Symbole enthält, muss wie folgt gezeichnet werden
 fplot(f)
 ```
 
-Mehrere Plots auf eine Anzeige zeichnen
+Mehrere Plots auf einer Anzeige zeichnen
 
 ```
 hold on
