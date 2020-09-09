@@ -23,23 +23,6 @@ f = @(x) x^2
 
 Zum Beispiel lassen sich nur `1)`-Funktionen direkt mit `solve(f)` lösen, nicht jedoch `2)`.
 
-## Plotten
-
-Eine Funktion, die Symbole enthält, muss wie folgt gezeichnet werden
-
-```
-fplot(f)
-```
-
-Mehrere Plots auf einer Anzeige zeichnen
-
-```
-hold on
-fplot(f)
-fplot(g)
-hold off
-```
-
 ## Analysis
 
 Nullstellen einer Funktion
@@ -119,6 +102,36 @@ Berechnen der Determinante. *Ist ein LGS lösbar <=> Determinante != 0*
 
 ```
 det(A)
+```
+
+## Plotten
+
+Eine Funktion, die Symbole enthält, muss wie folgt gezeichnet werden
+
+```
+fplot(f)
+```
+
+Mehrere Plots auf einer Anzeige zeichnen
+
+```
+hold on
+fplot(f)
+fplot(g)
+hold off
+```
+
+Integral mit Fläche zeichnen
+
+```
+f = @(x) -1*x.^3+4*x.^2+-5*x+2
+x = linspace(0, 5);
+inty = cumtrapz(x,f(x));
+figure(1)
+plot(x, inty, '-k', 'LineWidth',1)
+hold on
+patch([x fliplr(x)], [zeros(size(x)) fliplr(inty)], 'g')
+hold off
 ```
 
 ## FAQ
