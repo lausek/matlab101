@@ -22,6 +22,12 @@ x = linsolve(A, b)
 x = A\b
 ```
 
+Berechnen der Determinante. *Ist ein LGS lösbar <=> Determinante != 0*
+
+```
+det(A)
+```
+
 ## FAQ
 
 - Was bedeutet `properly vectorize your function`?
