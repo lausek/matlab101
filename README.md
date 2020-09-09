@@ -1,5 +1,11 @@
 # matlab 101
 
+Zurücksetzen der Umgebung, Löschen aller Variablen
+
+```
+clear
+```
+
 ## Definieren einer Funktion
 
 1. Prinzipiell muss zwischen der Definition über Symbole
@@ -32,6 +38,11 @@ Ableiten einer Funktion
 ```
 f1 = diff(f, x, 1) % Erste Ableitung
 f2 = diff(f, x, 2) % Zweite Ableitung
+```
+
+Tangente an einer Stelle `x0`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
+
+```
 ```
 
 Integrieren einer Funktion (`a` untere Grenze, `b` obere Grenze)
