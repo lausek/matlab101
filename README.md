@@ -134,6 +134,14 @@ patch([x fliplr(x)], [zeros(size(x)) fliplr(inty)], 'g')
 hold off
 ```
 
+Plotten einer Funktion mit zwei Variablen
+
+```
+syms x y;
+f = sin(x) + cos(y)
+fmesh(f)
+```
+
 ## FAQ
 
 - Was bedeutet `properly vectorize your function`?
