@@ -1,5 +1,20 @@
 # matlab 101
 
+## Analysis
+
+Ableiten einer Funktion
+
+```
+f1 = diff(f, x, 1) % Erste Ableitung
+f2 = diff(f, x, 2) % Zweite Ableitung
+```
+
+Integrieren einer Funktion (`a` untere Grenze, `b` obere Grenze)
+
+```
+s = integral(f, a, b)
+```
+
 ## Lineare Algebra
 
 Definieren einer Matrix (`,` trennt Spalten, `;` trennt Zeilen)
@@ -32,8 +47,8 @@ det(A)
 
 - Was bedeutet `properly vectorize your function`?
 ```
-% funktioniert nur mit skalaren
+% Funktioniert nur mit Skalaren
 f = @(x) x^2
-% funktioniert mit vektoren
+% Funktioniert mit Vektoren
 f = @(x) x.^2
 ```
