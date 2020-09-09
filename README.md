@@ -23,6 +23,23 @@ f = @(x) x^2
 
 Zum Beispiel lassen sich nur `1.`-Funktionen direkt mit `solve(f)` lösen, nicht jedoch `2.`.
 
+## Plotten
+
+Eine Funktion, die Symbole enthält, muss wie folgt gezeichnet werden
+
+```
+fplot(f)
+```
+
+Mehrere Plots auf eine Anzeige zeichnen
+
+```
+hold on
+fplot(f)
+fplot(g)
+hold off
+```
+
 ## Analysis
 
 Nullstellen einer Funktion
@@ -31,6 +48,12 @@ Nullstellen einer Funktion
 syms x
 f = @(x) x^2 - 2
 solve(f, x)
+```
+
+Minimum einer Funktion (`x0` ist Startpunkt der Suche)
+
+```
+minY = fminsearch(f, x0)
 ```
 
 Ableiten einer Funktion
