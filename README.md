@@ -21,3 +21,13 @@ Lösen eines LGS
 x = linsolve(A, b)
 x = A\b
 ```
+
+## FAQ
+
+- Was bedeutet `properly vectorize your function`?
+```
+% funktioniert nur mit skalaren
+f = @(x) x^2
+% funktioniert mit vektoren
+f = @(x) x.^2
+```
