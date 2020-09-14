@@ -40,6 +40,13 @@ minX = fminsearch(f, x0)
 minY = f(minX)
 ```
 
+Minimum einer Funktion mit mehreren Variablen
+
+```
+x0 = [0, 0]
+[xmin, fval] = fminsearch(@(x) f(x(1), x(2)), x0)
+```
+
 Ableiten einer Funktion
 
 ```
