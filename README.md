@@ -73,6 +73,8 @@ Taylorentwicklung einer Funktion (`x0` ist Entwicklungspunkt)
 T = taylor(f, x, 'ExpansionPoint', x0)
 ```
 
+> Die Ordnung der Entwicklung kann über den Parameter `Order` angegeben werden: `taylor(f, x, 'Order', 10, ...)`
+
 ## Lineare Algebra
 
 Definieren einer Matrix (`,` trennt Spalten, `;` trennt Zeilen)
