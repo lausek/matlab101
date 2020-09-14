@@ -54,11 +54,12 @@ f1 = diff(f, x, 1) % Erste Ableitung
 f2 = diff(f, x, 2) % Zweite Ableitung
 ```
 
-Tangente an einer Stelle `g`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
+Partielle Ableitung
 
 ```
-df = subs(diff(f, x), x, g);
-fplot(df*(x-g) + f(g))    
+g = x^2 + y^2
+diff(g, x) % dg/dx
+diff(g, y) % dg/dy
 ```
 
 Integrieren einer Funktion (`a` untere Grenze, `b` obere Grenze)
@@ -74,6 +75,13 @@ T = taylor(f, x, 'ExpansionPoint', x0)
 ```
 
 > Die Ordnung der Entwicklung kann über den Parameter `Order` angegeben werden: `taylor(f, x, 'Order', 10, ...)`
+
+Tangente an einer Stelle `g`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
+
+```
+df = subs(diff(f, x), x, g);
+fplot(df*(x-g) + f(g))    
+```
 
 ## Lineare Algebra
 
