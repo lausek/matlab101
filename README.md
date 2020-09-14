@@ -40,6 +40,8 @@ minX = fminsearch(f, x0)
 minY = f(minX)
 ```
 
+> Die Funktion `fminsearch` kann auf die Hochpunkte erweitert werden indem der Funktionsterm mit -1 invertiert wird.
+
 Minimum einer Funktion mit mehreren Variablen
 
 ```
