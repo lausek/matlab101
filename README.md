@@ -142,10 +142,20 @@ area(f(linspace(-10,10)))
 
 Plotten einer Funktion mit zwei Variablen
 
+* Als Mesh
+
 ```
 syms x y;
 f = sin(x) + cos(y)
 fmesh(f)
+```
+
+* Als Fläche
+
+```
+syms x y;
+f = sin(x) + cos(y)
+fsurf(f)
 ```
 
 ## FAQ
