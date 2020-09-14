@@ -29,8 +29,8 @@ Nullstellen einer Funktion
 
 ```
 syms x
-f = @(x) x^2 - 2
-solve(f, x)
+f = x^2 - 2
+solve(f)
 ```
 
 Minimum einer Funktion (`x0` ist Startpunkt der Suche)
