@@ -177,6 +177,15 @@ f = sin(x) + cos(y)
 fsurf(f)
 ```
 
+Vektorfunktionen plotten
+
+```
+[x,y] = meshgrid(-3:0.5:3, -3:0.5:3);
+Z = [(5*exp(2*x)-4*y)/y, sin(x)*exp(y)];
+[U,V,W] = surfnorm(Z);
+quiver3(Z,U,V,W)
+```
+
 ## FAQ
 
 - Was bedeutet `properly vectorize your function`?
