@@ -177,7 +177,7 @@ f = sin(x) + cos(y)
 fsurf(f)
 ```
 
-Vektorfunktionen plotten
+3D-Vektorfunktionen plotten
 
 ```
 [x,y] = meshgrid(-3:0.5:3, -3:0.5:3);
