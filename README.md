@@ -195,3 +195,10 @@ f = @(x) x^2
 % Funktioniert mit Vektoren
 f = @(x) x.^2
 ```
+
+- Was bedeutet `Matrix is singular to working precision.`?
+> Die verwendete Matrix hat eine Determinante von null und ist deshalb nicht invertierbar. Dieser Fehler kann vorkommen wenn durch eine Matrix dividiert werden soll, die Funktion jedoch nicht `properly vectorized` ist:
+```
+fx = (5*exp(2.*x)-4.*y)/y    % fehler
+fx = (5*exp(2.*x)-4.*y)./y   % korrekt
+```
