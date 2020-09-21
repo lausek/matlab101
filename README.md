@@ -23,6 +23,24 @@ f = @(x) x^2
 
 Zum Beispiel lassen sich nur `1)`-Funktionen direkt mit `solve(f)` lösen, nicht jedoch `2)`.
 
+## Koordinatensysteme
+
+Formel zum Umrechnen von kartesischen Koordinaten in Polarkoordinaten 
+
+```
+syms x y
+[t, r] = cart2pol(x, y)
+```
+
+Formel zum Umrechnen von Polarkoordinaten in kartesische Koordinaten
+
+```
+syms t r
+[x, y] = pol2cart(t, r)
+```
+
+> Die Funktionen `pol2cart` und `cart2pol` können mit numerischen Werten und Symbolen umgehen.
+
 ## Analysis
 
 Nullstellen einer Funktion
