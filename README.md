@@ -39,7 +39,21 @@ syms t r
 [x, y] = pol2cart(t, r)
 ```
 
-> Die Funktionen `pol2cart` und `cart2pol` können mit numerischen Werten und Symbolen umgehen.
+Formel zum Umrechnen von kartesischen Koordinaten in sphärische Koordinaten
+
+```
+syms x y z
+[r, t, p] = cart2sph(x, y, z)
+```
+
+Formel zum Umrechnen von sphärischen Koordinaten in kartesische Koordinaten
+
+```
+syms r t p
+[x, y, z] = sph2cart(r, t, p)
+```
+
+> Die Funktionen `cart2pol`, `pol2cart`, `cart2sph` und `sph2cart` können mit numerischen Werten und Symbolen umgehen.
 
 ## Analysis
 
