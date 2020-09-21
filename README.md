@@ -218,6 +218,14 @@ Z = [(5*exp(2*x)-4*y)/y, sin(x)*exp(y)];
 quiver3(Z,U,V,W)
 ```
 
+Plot in Polarkoordinaten
+
+```
+t = 0:0.1:2*pi
+r = sin(t).*cos(t)
+polarplot(t,r)
+```
+
 ## FAQ
 
 - Was bedeutet `properly vectorize your function`?
