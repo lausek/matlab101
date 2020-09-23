@@ -6,13 +6,15 @@ Zurücksetzen der Umgebung, Löschen aller Variablen
 clear
 ```
 
+> Tipp: Im Skript sollte `clear` als Erstes aufgerufen werden, damit der Programmcache zurückgesetzt und ein Überschreiben von symbolisch-definierten Variablen umgangen wird.
+
 ## Definieren einer Funktion
 
 1. Prinzipiell muss zwischen der Definition über Symbole
 
 ```
 syms x
-f = x^2
+f(x) = x^2
 ```
 
 2. ... und der Definition als `function_handle` unterschieden werden. 
@@ -22,6 +24,8 @@ f = @(x) x^2
 ```
 
 Zum Beispiel lassen sich nur `1)`-Funktionen direkt mit `solve(f)` lösen, nicht jedoch `2)`.
+
+> `f(x) = x^2` und `f = x^2` sind nicht äquivalent!
 
 ## Koordinatensysteme
 
@@ -110,11 +114,18 @@ T = taylor(f, x, 'ExpansionPoint', x0)
 
 > Die Ordnung der Entwicklung kann über den Parameter `Order` angegeben werden: `taylor(f, x, 'Order', 10, ...)`
 
-Tangente an einer Stelle `g`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
+Tangente an einer Stelle `x0`, Formel: <img src="https://render.githubusercontent.com/render/math?math=t(x)=\frac{\partial%20f}{\partial%20x}(x_0)(x-x_0)%2Bf(x_0)">
 
 ```
-df = subs(diff(f, x), x, g);
-fplot(df*(x-g) + f(g))    
+df = subs(diff(f, x), x, x0);
+fplot(df*(x-x0) + f(x0))    
+```
+
+Tangentialebene an einer Stelle `(x0, y0)`
+
+```
+gf = gradient(f, [x, y])
+te = f(x0, y0) + [x - x0, y - y0] * gf(x0, y0)
 ```
 
 ## Lineare Algebra
