@@ -121,6 +121,14 @@ df = subs(diff(f, x), x, x0);
 fplot(df*(x-x0) + f(x0))    
 ```
 
+Ableitungsoperatoren mit mehreren Veränderlichen
+
+```
+grad = gradient(f, [x, y, z]) % Gradient
+jaco = jacobian(f, [x, y, z]) % Jacobi-Matrix
+hess = hessian(f, [x, y, z])  % Hesse-Matrix
+```
+
 Tangentialebene an einer Stelle `(x0, y0)`
 
 ```
