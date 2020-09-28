@@ -65,7 +65,7 @@ Nullstellen einer Funktion
 
 ```
 syms x
-f = x^2 - 2
+f(x) = x^2 - 2
 solve(f)
 ```
 
